@@ -108,11 +108,13 @@ public class OperationListener extends Operations implements ActionListener {
         }
 
         // cut trailing zeros
-        if (Screen.shown.indexOf(".") != -1) {
+        if (Screen.shown.indexOf(".") != -1 && Screen.shown.indexOf("E") == -1) {
             System.out.println("\nState: Cutting off Zeros");
             for (int i = Screen.shown.length() - 1; i > Screen.shown.indexOf(".") - 1; i--) {
                 if (Screen.shown.charAt(i) == '0') {
                     Screen.shown = Screen.shown.substring(0, i);
+                } else {
+                    break;
                 }
             }
         }

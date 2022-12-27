@@ -41,6 +41,7 @@ public class Buttons extends JPanel {
         this.setLayout(new GridBagLayout());
         GridBagConstraints c = new GridBagConstraints();
         // Make the clear button on top
+        // For windows c.ipadx = 20;
         c.gridx = 0; c.gridy = 0;
         this.add(clear);
         c.gridx = 3;
