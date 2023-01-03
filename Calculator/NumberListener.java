@@ -17,6 +17,8 @@ public class NumberListener extends Operations implements ActionListener {
 
         } else if (e.getActionCommand().equals(".") && Screen.shown.indexOf(".") == -1) {
             Screen.shown += ".";
+        } else if (e.getActionCommand().equals("~") && !Screen.shown.equals("") && !Screen.shown.contains("~")) {
+            Screen.shown =  "-" + Screen.shown;
         }
 
         Screen.updateDisplay();

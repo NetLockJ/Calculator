@@ -3,8 +3,9 @@ import java.util.ArrayList;
 public class Operations {
 
     public static enum Operation {
-        ADD, SUBTRACT, MULTIPLY, DIVIDE, EQUALS, DECIMAL, CLEAR, NONE, NUMBER
+        ADD, SUBTRACT, MULTIPLY, DIVIDE, EQUALS, DECIMAL, CLEAR, NONE, NUMBER, NEGATIVE
     }
+
     /**Keeps Track of Non-Number Operations */
     static Operation lastOperaion = Operation.NONE;
     /**Keeps the last 5 operations performed for refrence*/

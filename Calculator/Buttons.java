@@ -1,6 +1,4 @@
 import javax.swing.*;
-import javax.swing.event.SwingPropertyChangeSupport;
-
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -8,7 +6,7 @@ public class Buttons extends JPanel {
 
     private String buttonLabels = "789*456-123+0.÷=";
     JButton clear = new JButton("Clear");
-    JButton off = new JButton("Pwr");
+    JButton neg = new JButton("~");
 
     ArrayList<JButton> buttons = new ArrayList<JButton>() {{
         for(int i = 0; i < buttonLabels.length(); i++) {
@@ -31,6 +29,7 @@ public class Buttons extends JPanel {
             }
         }
         clear.addActionListener(new OperationListener());
+        neg.addActionListener(new NumberListener());
     }
 
     /**
@@ -45,7 +44,7 @@ public class Buttons extends JPanel {
         c.gridx = 0; c.gridy = 0;
         this.add(clear);
         c.gridx = 3;
-        this.add(off, c);
+        this.add(neg, c);
         // Specify to fill horizontal space
         c.fill = GridBagConstraints.HORIZONTAL;
         int listNum = 0;
